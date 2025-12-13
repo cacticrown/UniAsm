@@ -1,12 +1,12 @@
 main() -> void
-    number1 = -15
-    number2 = 5
-    sum = add_i64(number1, number2)
+    i64 number1 = -15
+    i64 number2 = 5
+    i64 sum = add_i64(number1, number2)
     push sum
 
     ; pointer stuff
-    pointerToNumber1 = number1
-    valueInNumber1 = [pointerToNumber1]
+    usize pointerToNumber1 = number1
+    i64 valueInNumber1 = [pointerToNumber1]
 
 [CallingConvention="c"]
 add_i64(i64 a, i64 b) -> i64    
@@ -18,5 +18,5 @@ add_i64(i64 a, i64 b) -> i64
 
     i64 notNeededLol "stack"    ; special, pushed to stack instead of register
 
-    add a, b
-    ret a
+    i64 sum = add a, b
+    ret sum
