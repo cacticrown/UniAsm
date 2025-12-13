@@ -1,5 +1,5 @@
 main() -> void
-    i64 number1 = -15
+    i64 number1 = -15   ; this will give the compiler the choice of putting this in any register or the stack
     i64 number2 = 5
     i64 sum = add_i64(number1, number2)
     push sum
@@ -9,7 +9,7 @@ main() -> void
     i64 valueInNumber1 = [pointerToNumber1]
 
 [CallingConvention="c"]
-add_i64(i64 a, i64 b) -> i64    
+add_i64(i64 a, i64 b) -> i64
     #if x64
     i64 x "rax"    ; forced rax register
     #else
