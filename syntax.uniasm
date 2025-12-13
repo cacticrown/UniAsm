@@ -9,9 +9,7 @@ main() -> void
     valueInNumber1 = [pointerToNumber1]
 
 [CallingConvention="c"]
-add_i64(i64 a, i64 b) -> i64
-    ; stack layout: a b
-    
+add_i64(i64 a, i64 b) -> i64    
     #if x64
     i64 x "rax"    ; forced rax register
     #else
