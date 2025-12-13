@@ -1,4 +1,4 @@
-main -> void
+main() -> void
     number1 = -15
     number2 = 5
     sum = add_i64(number1, number2)
