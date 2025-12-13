@@ -3,6 +3,7 @@ main() -> void
     i64 number2 = 5
     i64 sum = add_i64(number1, number2)
     push sum
+    pop
 
     ; pointer stuff
     usize pointerToNumber1 = number1
