@@ -2,6 +2,9 @@ main() -> void
     i64 number1 = -15   ; this will give the compiler the choice of putting this in any register or the stack
     i64 number2 = 5
     i64 sum = add_i64(number1, number2)
+
+    ; pushing and poping on the stack might lead to undefined behaviour because uniasm might pop or push in the background
+    ; it is not recommended to do manually unless you know what you're doing
     push sum
     pop
 
